@@ -85,7 +85,7 @@
     //Fill background and call update function
     function render()
     {
-        ctx.fillStyle = "black";
+        ctx.fillStyle = "#3498db";
         ctx.fillRect(0, 0, W, H);
 
        update();
