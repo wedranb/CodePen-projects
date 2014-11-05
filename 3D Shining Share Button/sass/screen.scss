@@ -1,0 +1,170 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400);
+
+$font-family: "Montserrat";
+
+$midnight: #2c3e50;
+$asphalt: #34495e;
+$silver: #bdc3c7;
+$tw: #3498db;
+$fb: #3b5998;
+$gp: #e74c3c;
+
+@mixin vendor-prefix($name, $argument) {
+  -webkit-#{$name}: #{$argument};
+  -ms-#{$name}: #{$argument};
+  -moz-#{$name}: #{$argument};
+  -o-#{$name}: #{$argument};
+  #{$name}: #{$argument};
+}
+
+body {
+  font-family: $font-family, sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  color: $silver;
+  background: $midnight;
+}
+
+.container {
+  width: 150px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  perspective: 1000px;
+}
+
+.cube {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  height: 40px;
+  transition: transform .4s;
+  transition-timing-function: easeInExpo;
+  transform-style: preserve-3d;
+}
+
+.social {
+  text-align: center;
+  width: 100%;
+  a {
+    display: inline-block;
+    position: relative;
+    width: 45px;
+    height: 40px;
+    cursor: pointer;
+    user-select: none;
+    fill: #bdc3c7;
+  }
+  svg {
+    width: 20px;
+    height: 40px;
+    vertical-align: middle;
+  }
+}
+
+.side {
+  height: 40px;
+  opacity: 1;
+  line-height: 40px;
+  background: $asphalt;
+  cursor: pointer;
+}
+
+.side1 {
+  border: 0;
+  overflow: hidden;
+  outline: none;
+  transition: all 0.3 ease;
+  &:after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    left: -200px;
+    top: 0;
+    transform: skewX(-20deg);
+    background-image: linear-gradient(to right, transparent, rgba( darken(#fff, 1), 0.4), transparent);
+    height: 50px;
+  }
+  &:hover:after {
+    animation: shine .5s ease;
+  }
+}
+
+.side2 {
+  border: 0;
+  overflow: hidden;
+  outline: none;
+  transition: all 0.3 ease;
+  &:after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    left: -200px;
+    top: 0;
+    transform: skewX(-20deg);
+    height: 50px;
+  }
+}
+
+.tw--hover {
+  .tw {
+    svg {
+      fill: $tw;
+    }
+  }
+  &:after {
+    background-image: linear-gradient(to right, transparent, rgba($tw, 0.4), transparent);
+    animation: shine .5s ease;
+  }
+}
+
+.fb--hover {
+  .fb {
+    svg {
+      fill: $fb;
+    }
+  }
+  &:after {
+    background-image: linear-gradient(to right, transparent, rgba($fb, 0.4), transparent);
+    animation: shine .5s ease;
+  }
+}
+
+.gp--hover {
+  .gp {
+    svg {
+      fill: $gp;
+    }
+  }
+  &:after {
+    background-image: linear-gradient(to right, transparent, rgba($gp, 0.4), transparent);
+    animation: shine .5s ease;
+  }
+}
+
+.side1 {
+  transform: rotateY(0deg) translateZ(20px);
+}
+
+.side2 {
+  transform: rotateX(90deg) translateZ(60px);
+}
+
+.clicked {
+  transform: rotateX(-90deg);
+}
+
+@keyframes shine {
+  100% {
+    left: 200px;
+  }
+}
