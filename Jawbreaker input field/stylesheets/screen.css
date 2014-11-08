@@ -1,0 +1,260 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:600,400,300);
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video
+{
+    font: inherit;
+    font-size: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    vertical-align: baseline;
+
+    border: 0;
+}
+
+html
+{
+    line-height: 1;
+}
+
+ol,
+ul
+{
+    list-style: none;
+}
+
+table
+{
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+caption,
+th,
+td
+{
+    font-weight: normal;
+
+    text-align: left;
+    vertical-align: middle;
+}
+
+q,
+blockquote
+{
+    quotes: none;
+}
+q:before,
+q:after,
+blockquote:before,
+blockquote:after
+{
+    content: '';
+    content: none;
+}
+
+a img
+{
+    border: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary
+{
+    display: block;
+}
+
+body
+{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    overflow: hidden;
+
+    width: 250px;
+    height: 50px;
+
+    transform: translate(-50%, -50%);
+}
+
+input[type=text]
+{
+    font-weight: 600;
+
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    height: 20px;
+
+    color: #7f8c8d;
+    border: none;
+    border-bottom: 1px solid #bdc3c7;
+    outline: none;
+    background-color: transparent;
+}
+
+.placeholder
+{
+    font-size: 13px;
+
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+
+    margin: 0;
+
+    transition: .2s all ease-out;
+
+    color: #95a5a6;
+}
+
+.lb
+{
+    font-size: 10px;
+
+    position: absolute;
+    z-index: 40;
+    top: 10px;
+    left: -30px;
+
+    margin: 0;
+
+    transition: .2s all ease-out;
+
+    opacity: 0;
+    color: #3498db;
+}
+
+.lb--animate
+{
+    left: 0;
+
+    opacity: 1;
+}
+
+.placeholder--animate
+{
+    left: 20px;
+
+    opacity: 0;
+}
+
+.border
+{
+    position: absolute;
+    bottom: 0;
+
+    display: inline-block;
+
+    width: 0;
+    height: 2px;
+    margin: 0;
+    padding: 0;
+
+    transition: .2s width ease-out;
+
+    background-color: #3498db;
+}
+
+.border--animate
+{
+    width: 100%;
+}
